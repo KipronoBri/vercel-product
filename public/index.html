@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShopNext Store</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <a class="brand" href="#">🛒 ShopNext</a>
+
+        <input
+            id="search"
+            placeholder="Search products..."
+        >
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#catalog">Products</a>
+            <a href="#cart">
+                Cart <b id="count">0</b>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h1>Quality Products, Better Living</h1>
+                <p>Shop everyday essentials at great prices.</p>
+
+                <a class="button" href="#catalog">
+                    Browse Products →
+                </a>
+            </div>
+
+            <div class="hero-art">
+                SHOP<br>
+                <strong>SMART.</strong>
+            </div>
+        </section>
+
+        <div class="layout">
+            <section>
+                <h2 id="catalog">Featured Products</h2>
+
+                <div id="products" class="products"></div>
+            </section>
+
+            <aside>
+                <h2 id="cart">
+                    Your Cart (<span id="cartcount">0</span>)
+                </h2>
+
+                <div id="cartitems"></div>
+
+                <div class="totals">
+                    <p>
+                        Subtotal
+                        <b id="subtotal">KSh 0</b>
+                    </p>
+
+                    <p>
+                        Delivery
+                        <b>Free</b>
+                    </p>
+
+                    <h3>
+                        Total
+                        <b id="total">KSh 0</b>
+                    </h3>
+                </div>
+
+                <button id="checkout" class="button wide">
+                    Proceed to Checkout
+                </button>
+
+                <div id="paybox" hidden>
+                    <h3>M-Pesa STK Push</h3>
+
+                    <label>Safaricom phone number</label>
+
+                    <input
+                        id="phone"
+                        placeholder="07XXXXXXXX"
+                    >
+
+                    <button id="pay" class="button wide">
+                        Send STK Push
+                    </button>
+                </div>
+
+                <p id="notice" role="status"></p>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 ShopNext · MySQL store · M-Pesa checkout
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+</html>
+```

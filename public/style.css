@@ -1,0 +1,319 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f3f7fb;
+    color: #142238;
+    font: 15px Inter, system-ui, Arial;
+}
+
+header {
+    height: 70px;
+    background: #101d2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+    gap: 35px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+header input {
+    max-width: 390px;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav b {
+    background: #1681ff;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #dce5ef;
+    border-radius: 8px;
+    font: inherit;
+    width: 100%;
+}
+
+main {
+    max-width: 1500px;
+    margin: auto;
+    padding: 24px;
+}
+
+.hero {
+    background: linear-gradient(110deg, #e5f1ff, #f9fcff);
+    border-radius: 12px;
+    padding: 35px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 200px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.hero p {
+    color: #58708b;
+    font-size: 17px;
+}
+
+.hero-art {
+    font-size: 32px;
+    line-height: 1.2;
+    color: #1681ff;
+    font-weight: 800;
+    text-align: center;
+    transform: rotate(-5deg);
+    padding: 25px;
+}
+
+.hero-art strong {
+    color: #13243a;
+    font-size: 48px;
+}
+
+.button {
+    display: inline-block;
+    background: #087cff;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 22px;
+    margin-top: 22px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.product,
+aside {
+    background: white;
+    border: 1px solid #e3ebf3;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.product img {
+    width: 100%;
+    height: 155px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.price {
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.stock {
+    color: #07965b;
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.actions input {
+    width: 65px;
+    padding: 8px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 9px 5px;
+}
+
+aside {
+    align-self: start;
+    position: sticky;
+    top: 88px;
+}
+
+aside h2 {
+    font-size: 18px;
+    margin: 2px 0 15px;
+}
+
+.cartline {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #edf1f5;
+    padding: 10px 0;
+    gap: 8px;
+}
+
+.cartline button {
+    color: #b23b3b;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.totals {
+    margin-top: 15px;
+}
+
+.totals p,
+.totals h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wide {
+    width: 100%;
+}
+
+#paybox {
+    border-top: 1px solid #e8eef4;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+#paybox label {
+    display: block;
+    margin: 12px 0 6px;
+}
+
+#notice {
+    color: #087a51;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    padding: 25px 4%;
+    color: #63758a;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        position: static;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    header {
+        gap: 12px;
+    }
+
+    header input {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 560px) {
+    header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 12px 4%;
+    }
+
+    .brand {
+        font-size: 21px;
+    }
+
+    header input {
+        order: 3;
+        max-width: none;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 25px;
+        min-height: 160px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero-art {
+        display: none;
+    }
+
+    .products {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main {
+        padding: 14px;
+    }
+
+    .product {
+        padding: 10px;
+    }
+
+    .product img {
+        height: 115px;
+    }
+
+    .actions {
+        flex-wrap: wrap;
+    }
+
+    .actions input {
+        width: 52px;
+    }
+}
+
